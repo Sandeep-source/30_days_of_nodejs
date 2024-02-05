@@ -1,12 +1,14 @@
 {
-  "name": "30_days_of_nodejs",
+  "name": "course",
   "version": "1.0.0",
   "description": "",
-  "main": "day1.js",
-  "type":"commonjs",
+  "main": "builtin-mod.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "figlet": "^1.7.0"
+  }
 }
