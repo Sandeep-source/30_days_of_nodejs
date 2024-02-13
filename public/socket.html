@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebSocket Test</title>
+</head>
+<body>
+  <script>
+    const socket = new WebSocket('ws://localhost:3000');
+
+    socket.addEventListener('open', function (event) {
+      console.log('WebSocket connection established');
+    });
+
+    socket.addEventListener('message', function (event) {
+      let op = document.getElementById('output');
+      op.innerText='Received message from server: '+ event.data+"";
+      console.table(event)
+    });
+    function send(){
+        let ip = document.getElementById('text')
+        let text = ip.value;
+        ip.value="";
+        console.log("Client",text)
+        socket.send(text);
+    }
+  </script>
+  <h1>Day 13 challenge</h1>
+  <input type="text" id ="text" style="padding:5px;margin:5px"/><br/>
+  <button onclick="send()" style="padding:5px;margin:5px">Send</button><br/> <br/>
+  <p id="output"></p>
+</body>
+</html>

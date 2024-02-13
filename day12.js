@@ -13,7 +13,7 @@ app.use(rate)
 const PORT = process.env.PORT | 3000
 
 app.get('/',(req,res)=>{
-    res.send("<h1>Day 12 challenge</h1>")
+    res.send("<h1>Welcome to site for limit test refresh the page 10 times to see limit</h1>")
 })
 
 app.listen(PORT,()=>{
