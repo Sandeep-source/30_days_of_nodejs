@@ -12,7 +12,7 @@ mongoose
   });
 
 const course = new mongoose.Schema({
-  name: String,
+  name: {type: String,required: true},
   email: String,
   password: { type: String, default: "123456789" },
 },{collection: "users"});
