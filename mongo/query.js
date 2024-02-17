@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
-
+require('dotenv').config()
 mongoose
   .connect(
-    "mongodb+srv://sandeep:sandeep@cluster0.ab8ysr1.mongodb.net/sample_mflix?retryWrites=true&w=majority"
+    process.env.MONGO_URL
   )
   .then(() => {
     console.log("Connection is successful");
