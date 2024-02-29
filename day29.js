@@ -11,7 +11,6 @@ app.get('/',(req,res)=>{
 })
 
 function errorHandler(err, req, res, next) {
-    // Your implementation here
     console.log("Caught Error...")
     res.send("Caught Error...")
 }
